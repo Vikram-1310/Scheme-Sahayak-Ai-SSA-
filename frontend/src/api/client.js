@@ -1,20 +1,12 @@
-// frontend/src/api/client.js
-// Scheme Sahayak AI API client
-//
-// Local development:
-//   Vite proxy sends /api -> http://127.0.0.1:8000
-//
-// Production:
-//   VITE_API_URL points to the deployed Render backend.
-
-const API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/$/, "");
+const API_URL = import.meta.env.VITE_API_URL || "";
 
 const TOKEN_KEY = "scheme_sahayak_token";
 const USER_KEY = "scheme_sahayak_user";
 
-// --------------------------------------------------
-// Session
-// --------------------------------------------------
+// Production backend on Render.
+// Local development still uses Vite's /api proxy.
+const API_BASE =
+  import.meta.env.VITE_API_URL || "";
 
 export function getToken() {
   return localStorage.getItem(TOKEN_KEY);
@@ -22,16 +14,7 @@ export function getToken() {
 
 export function getStoredUser() {
   const raw = localStorage.getItem(USER_KEY);
-
-  if (!raw) {
-    return null;
-  }
-
-  try {
-    return JSON.parse(raw);
-  } catch {
-    return null;
-  }
+  return raw ? JSON.parse(raw) : null;
 }
 
 export function setSession(token, user) {
@@ -45,31 +28,15 @@ export function clearSession() {
   localStorage.removeItem("scheme_sahayak_profile_id");
 }
 
-// --------------------------------------------------
-// API Error
-// --------------------------------------------------
-
 class ApiError extends Error {
   constructor(message, status, detail) {
     super(message);
-    this.name = "ApiError";
     this.status = status;
     this.detail = detail;
   }
 }
 
-// --------------------------------------------------
-// Request helper
-// --------------------------------------------------
-
-async function request(
-  path,
-  {
-    method = "GET",
-    body = undefined,
-    auth = true,
-  } = {}
-) {
+async function request(path, { method = "GET", body, auth = true } = {}) {
   const headers = {
     "Content-Type": "application/json",
   };
@@ -82,78 +49,35 @@ async function request(
     }
   }
 
-  /*
-   * Local:
-   *   API_BASE = ""
-   *   /api/...
-   *
-   * Production:
-   *   API_BASE =
-   *   https://scheme-sahayak-ai-api.onrender.com
-   *
-   *   https://scheme-sahayak-ai-api.onrender.com/api/...
-   */
-
-  const url = `${API_BASE}/api${path}`;
-
-  console.log(`[Scheme Sahayak API] ${method} ${url}`);
-
-  let res;
-
-  try {
-    res = await fetch(url, {
-      method,
-      headers,
-      body: body !== undefined ? JSON.stringify(body) : undefined,
-    });
-  } catch (error) {
-    console.error("[Scheme Sahayak API] Network error:", error);
-
-    throw new ApiError(
-      "Unable to connect to the Scheme Sahayak AI backend.",
-      0,
-      error?.message || "Network error"
-    );
-  }
+  const res = await fetch(`${API_URL}/api${path}`, {
+    method,
+    headers,
+    body: body ? JSON.stringify(body) : undefined,
+  });
 
   let data = null;
 
   try {
     data = await res.json();
   } catch {
-    // Response has no JSON body.
     data = null;
   }
 
   if (!res.ok) {
-    const detail =
-      data?.detail ||
-      data?.message ||
-      res.statusText ||
-      "Request failed";
+    const detail = data?.detail || res.statusText;
 
     if (res.status === 401) {
       clearSession();
     }
 
-    console.error(
-      `[Scheme Sahayak API] ${res.status}:`,
-      detail
-    );
-
-    throw new ApiError(
-      detail,
-      res.status,
-      detail
-    );
+    throw new ApiError(detail, res.status, detail);
   }
 
   return data;
 }
 
-// ==================================================
-// AUTH
-// ==================================================
+
+// ==================== AUTH ====================
 
 export const registerUser = (
   username,
@@ -170,10 +94,7 @@ export const registerUser = (
     auth: false,
   });
 
-export const loginUser = (
-  username,
-  password
-) =>
+export const loginUser = (username, password) =>
   request("/auth/login", {
     method: "POST",
     body: {
@@ -183,9 +104,8 @@ export const loginUser = (
     auth: false,
   });
 
-// ==================================================
-// PROFILES
-// ==================================================
+
+// ==================== PROFILES ====================
 
 export const createProfile = (profile) =>
   request("/profiles", {
@@ -196,66 +116,77 @@ export const createProfile = (profile) =>
 export const getProfile = (profileId) =>
   request(`/profiles/${profileId}`);
 
-export const updateProfile = (
-  profileId,
-  profile
-) =>
+export const updateProfile = (profileId, profile) =>
   request(`/profiles/${profileId}`, {
     method: "PUT",
     body: profile,
   });
 
-export const getMyProfile = () =>
-  request("/profiles/me");
+export const getProfileApplications = (profileId) =>
+  request(`/profiles/${profileId}/applications`);
 
-export const getProfileApplications = (
-  profileId
-) =>
-  request(
-    `/profiles/${profileId}/applications`
-  );
 
-// ==================================================
-// FEATURES
-// ==================================================
+// ==================== FEATURES ====================
 
 export const getFeatures = () =>
   request("/features");
 
-export const getFeature = (
-  featureId
-) =>
-  request(
-    `/features/${encodeURIComponent(featureId)}`
-  );
+export const getFeature = (featureId) =>
+  request(`/features/${featureId}`);
 
-// ==================================================
-// ELIGIBILITY
-// ==================================================
 
-export const checkEligibility = (
-  profile
-) =>
+// ==================== ELIGIBILITY ====================
+
+export const checkEligibility = (profile) =>
   request("/eligibility/check", {
     method: "POST",
     body: profile,
   });
 
-// ==================================================
-// RECOMMENDATIONS
-// ==================================================
 
-export const getRecommendations = (
-  profileWithAmount
-) =>
+// ==================== RECOMMENDATIONS ====================
+
+export const getRecommendations = (profileWithAmount) =>
   request("/recommendations", {
     method: "POST",
     body: profileWithAmount,
   });
 
-// ==================================================
-// SCHEMES
-// ==================================================
+
+// ==================== APPLICATIONS ====================
+
+export const submitApplication = (
+  beneficiaryId,
+  schemeId,
+  notes
+) =>
+  request("/applications", {
+    method: "POST",
+    body: {
+      beneficiary_id: beneficiaryId,
+      scheme_id: schemeId,
+      notes,
+    },
+  });
+
+export const getApplication = (applicationId) =>
+  request(`/applications/${applicationId}`);
+
+export const updateApplicationStatus = (
+  applicationId,
+  status,
+  notes
+) =>
+  request(`/applications/${applicationId}/status`, {
+    method: "PUT",
+    body: {
+      status,
+      notes,
+    },
+  });
+
+
+// ==================== SCHEMES ====================
 
 export const searchSchemes = (
   category,
@@ -264,23 +195,13 @@ export const searchSchemes = (
 ) => {
   const q = new URLSearchParams();
 
-  if (category) {
-    q.set("category", category);
-  }
-
-  if (state) {
-    q.set("state", state);
-  }
-
-  if (keyword) {
-    q.set("keyword", keyword);
-  }
-
-  const queryString = q.toString();
+  if (category) q.set("category", category);
+  if (state) q.set("state", state);
+  if (keyword) q.set("keyword", keyword);
 
   return request(
     `/schemes/search${
-      queryString ? `?${queryString}` : ""
+      q.toString() ? `?${q.toString()}` : ""
     }`,
     {
       auth: false,
@@ -288,9 +209,7 @@ export const searchSchemes = (
   );
 };
 
-export const getScheme = (
-  schemeId
-) =>
+export const getScheme = (schemeId) =>
   request(
     `/schemes/${encodeURIComponent(schemeId)}`,
     {
@@ -298,14 +217,13 @@ export const getScheme = (
     }
   );
 
-// ==================================================
-// AI CHAT
-// ==================================================
+
+// ==================== AI ====================
 
 export const chatWithAI = (
   message,
   {
-    sessionId = null,
+    sessionId,
     language = "en",
     schemeId = null,
   } = {}
@@ -320,22 +238,15 @@ export const chatWithAI = (
     },
   });
 
-export const getChatHistory = (
-  sessionId
-) =>
+export const getChatHistory = (sessionId) =>
   request(
-    `/ai/history/${encodeURIComponent(
-      sessionId
-    )}`
+    `/ai/history/${encodeURIComponent(sessionId)}`
   );
 
-// ==================================================
-// SAVED SCHEMES
-// ==================================================
 
-export const saveScheme = (
-  schemeId
-) =>
+// ==================== SAVED SCHEMES ====================
+
+export const saveScheme = (schemeId) =>
   request(
     `/saved/${encodeURIComponent(schemeId)}`,
     {
@@ -343,9 +254,7 @@ export const saveScheme = (
     }
   );
 
-export const unsaveScheme = (
-  schemeId
-) =>
+export const unsaveScheme = (schemeId) =>
   request(
     `/saved/${encodeURIComponent(schemeId)}`,
     {
@@ -356,9 +265,8 @@ export const unsaveScheme = (
 export const getSavedSchemes = () =>
   request("/saved");
 
-// ==================================================
-// CHANNEL PARTNERS
-// ==================================================
+
+// ==================== PARTNERS ====================
 
 export const getNearbyPartners = (
   schemeId,
@@ -374,50 +282,5 @@ export const getNearbyPartners = (
       auth: false,
     }
   );
-
-// ==================================================
-// APPLICATIONS
-// ==================================================
-
-export const submitApplication = (
-  beneficiaryId,
-  schemeId,
-  notes = null
-) =>
-  request("/applications", {
-    method: "POST",
-    body: {
-      beneficiary_id: beneficiaryId,
-      scheme_id: schemeId,
-      notes,
-    },
-  });
-
-export const getApplication = (
-  applicationId
-) =>
-  request(
-    `/applications/${applicationId}`
-  );
-
-export const updateApplicationStatus = (
-  applicationId,
-  status,
-  notes = null
-) =>
-  request(
-    `/applications/${applicationId}/status`,
-    {
-      method: "PUT",
-      body: {
-        status,
-        notes,
-      },
-    }
-  );
-
-// ==================================================
-// EXPORT
-// ==================================================
 
 export { ApiError };
