@@ -1,0 +1,1 @@
+export default function Notifications(){return <main className="page"><div className="container narrow"><span className="eyebrow">UPDATES</span><h1>Notifications</h1><p className="lead">Application and scheme updates will appear here.</p><div className="empty-state card"><h3>No new notifications</h3><p>You’re all caught up.</p></div></div></main>}

@@ -1,0 +1,22 @@
+Scheme Sahayak AI BACKEND
+
+Purpose:
+Backend API for the SC Beneficiary Website.
+
+Stack:
+- Python
+- FastAPI
+- Uvicorn
+- SQLite
+- JSON feature registry
+
+Primary responsibilities:
+- Beneficiary profile
+- Scheme data
+- Eligibility
+- Recommendation
+- Finance
+- Partners
+- Applications
+- Tracking
+- 317-feature registry
