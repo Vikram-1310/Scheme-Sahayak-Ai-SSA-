@@ -11,7 +11,7 @@ import logging
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-
+from ai.auth import router as auth_router
 from ai.api_models import (
     RecommendRequest,
     RecommendResponse,

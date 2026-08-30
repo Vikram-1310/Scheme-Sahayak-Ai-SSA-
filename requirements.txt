@@ -1,4 +1,6 @@
-fastapi>=0.110
+Get-ChildItem -Path ".\Scheme Sahayak AI" -Recurse -Directory |
+Where-Object { $_.Name -in @("backend","ai","server") } |
+ForEach-Object { $_.FullName }fastapi>=0.110
 uvicorn[standard]>=0.29
 PyJWT>=2.8
 pydantic>=2.0
