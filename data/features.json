@@ -1,0 +1,1659 @@
+{
+  "project": "SIH26092",
+  "total_features": 317,
+  "module_count": 13,
+  "modules": [
+    {
+      "id": "AUTH",
+      "title": "Authentication & Security",
+      "feature_count": 25
+    },
+    {
+      "id": "PROF",
+      "title": "Beneficiary Profile Management",
+      "feature_count": 25
+    },
+    {
+      "id": "ELIG",
+      "title": "Scheme Eligibility Engine",
+      "feature_count": 24
+    },
+    {
+      "id": "REC",
+      "title": "AI-Powered Scheme Recommendations",
+      "feature_count": 24
+    },
+    {
+      "id": "FIN",
+      "title": "Financial Calculators",
+      "feature_count": 25
+    },
+    {
+      "id": "APPL",
+      "title": "Application Workflow Management",
+      "feature_count": 24
+    },
+    {
+      "id": "DOC",
+      "title": "Document Management",
+      "feature_count": 24
+    },
+    {
+      "id": "LANG",
+      "title": "Multi-language Support",
+      "feature_count": 24
+    },
+    {
+      "id": "ADMIN",
+      "title": "Admin & Officer Dashboard",
+      "feature_count": 24
+    },
+    {
+      "id": "NOTIF",
+      "title": "Tracking & Notifications",
+      "feature_count": 25
+    },
+    {
+      "id": "REPORT",
+      "title": "Reporting & Analytics",
+      "feature_count": 24
+    },
+    {
+      "id": "SEARCH",
+      "title": "Search & Discovery",
+      "feature_count": 24
+    },
+    {
+      "id": "UX",
+      "title": "Accessibility & UX",
+      "feature_count": 25
+    }
+  ],
+  "features": [
+    {
+      "id": "AUTH-001",
+      "module": "Authentication & Security",
+      "title": "User registration with role selection"
+    },
+    {
+      "id": "AUTH-002",
+      "module": "Authentication & Security",
+      "title": "Secure login with JWT access tokens"
+    },
+    {
+      "id": "AUTH-003",
+      "module": "Authentication & Security",
+      "title": "Password hashing with PBKDF2-HMAC and per-user salt"
+    },
+    {
+      "id": "AUTH-004",
+      "module": "Authentication & Security",
+      "title": "Token expiry and refresh handling"
+    },
+    {
+      "id": "AUTH-005",
+      "module": "Authentication & Security",
+      "title": "Role-based access control (beneficiary/officer/admin)"
+    },
+    {
+      "id": "AUTH-006",
+      "module": "Authentication & Security",
+      "title": "Protected route middleware"
+    },
+    {
+      "id": "AUTH-007",
+      "module": "Authentication & Security",
+      "title": "Duplicate username prevention"
+    },
+    {
+      "id": "AUTH-008",
+      "module": "Authentication & Security",
+      "title": "Minimum password strength enforcement"
+    },
+    {
+      "id": "AUTH-009",
+      "module": "Authentication & Security",
+      "title": "Session invalidation on logout"
+    },
+    {
+      "id": "AUTH-010",
+      "module": "Authentication & Security",
+      "title": "Bearer token validation on every protected request"
+    },
+    {
+      "id": "AUTH-011",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #1"
+    },
+    {
+      "id": "AUTH-012",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #2"
+    },
+    {
+      "id": "AUTH-013",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #3"
+    },
+    {
+      "id": "AUTH-014",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #4"
+    },
+    {
+      "id": "AUTH-015",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #5"
+    },
+    {
+      "id": "AUTH-016",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #6"
+    },
+    {
+      "id": "AUTH-017",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #7"
+    },
+    {
+      "id": "AUTH-018",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #8"
+    },
+    {
+      "id": "AUTH-019",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #9"
+    },
+    {
+      "id": "AUTH-020",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #10"
+    },
+    {
+      "id": "AUTH-021",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #11"
+    },
+    {
+      "id": "AUTH-022",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #12"
+    },
+    {
+      "id": "AUTH-023",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #13"
+    },
+    {
+      "id": "AUTH-024",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #14"
+    },
+    {
+      "id": "AUTH-025",
+      "module": "Authentication & Security",
+      "title": "Authentication & Security - supplementary capability #15"
+    },
+    {
+      "id": "PROF-001",
+      "module": "Beneficiary Profile Management",
+      "title": "Create beneficiary profile"
+    },
+    {
+      "id": "PROF-002",
+      "module": "Beneficiary Profile Management",
+      "title": "View beneficiary profile"
+    },
+    {
+      "id": "PROF-003",
+      "module": "Beneficiary Profile Management",
+      "title": "Update beneficiary profile"
+    },
+    {
+      "id": "PROF-004",
+      "module": "Beneficiary Profile Management",
+      "title": "Category (SC/ST/OBC/EWS/General) capture"
+    },
+    {
+      "id": "PROF-005",
+      "module": "Beneficiary Profile Management",
+      "title": "Annual income capture"
+    },
+    {
+      "id": "PROF-006",
+      "module": "Beneficiary Profile Management",
+      "title": "Age capture and validation"
+    },
+    {
+      "id": "PROF-007",
+      "module": "Beneficiary Profile Management",
+      "title": "Business purpose capture"
+    },
+    {
+      "id": "PROF-008",
+      "module": "Beneficiary Profile Management",
+      "title": "Optional gender field"
+    },
+    {
+      "id": "PROF-009",
+      "module": "Beneficiary Profile Management",
+      "title": "Profile-to-user linkage"
+    },
+    {
+      "id": "PROF-010",
+      "module": "Beneficiary Profile Management",
+      "title": "Profile completeness indicator"
+    },
+    {
+      "id": "PROF-011",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #1"
+    },
+    {
+      "id": "PROF-012",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #2"
+    },
+    {
+      "id": "PROF-013",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #3"
+    },
+    {
+      "id": "PROF-014",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #4"
+    },
+    {
+      "id": "PROF-015",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #5"
+    },
+    {
+      "id": "PROF-016",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #6"
+    },
+    {
+      "id": "PROF-017",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #7"
+    },
+    {
+      "id": "PROF-018",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #8"
+    },
+    {
+      "id": "PROF-019",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #9"
+    },
+    {
+      "id": "PROF-020",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #10"
+    },
+    {
+      "id": "PROF-021",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #11"
+    },
+    {
+      "id": "PROF-022",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #12"
+    },
+    {
+      "id": "PROF-023",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #13"
+    },
+    {
+      "id": "PROF-024",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #14"
+    },
+    {
+      "id": "PROF-025",
+      "module": "Beneficiary Profile Management",
+      "title": "Beneficiary Profile Management - supplementary capability #15"
+    },
+    {
+      "id": "ELIG-001",
+      "module": "Scheme Eligibility Engine",
+      "title": "Category-based eligibility check"
+    },
+    {
+      "id": "ELIG-002",
+      "module": "Scheme Eligibility Engine",
+      "title": "Annual income limit check"
+    },
+    {
+      "id": "ELIG-003",
+      "module": "Scheme Eligibility Engine",
+      "title": "Minimum age eligibility check"
+    },
+    {
+      "id": "ELIG-004",
+      "module": "Scheme Eligibility Engine",
+      "title": "Maximum age eligibility check"
+    },
+    {
+      "id": "ELIG-005",
+      "module": "Scheme Eligibility Engine",
+      "title": "Business purpose matching"
+    },
+    {
+      "id": "ELIG-006",
+      "module": "Scheme Eligibility Engine",
+      "title": "Gender-specific scheme rules"
+    },
+    {
+      "id": "ELIG-007",
+      "module": "Scheme Eligibility Engine",
+      "title": "Per-scheme eligibility reason list"
+    },
+    {
+      "id": "ELIG-008",
+      "module": "Scheme Eligibility Engine",
+      "title": "Bulk eligibility check across all schemes"
+    },
+    {
+      "id": "ELIG-009",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #1"
+    },
+    {
+      "id": "ELIG-010",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #2"
+    },
+    {
+      "id": "ELIG-011",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #3"
+    },
+    {
+      "id": "ELIG-012",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #4"
+    },
+    {
+      "id": "ELIG-013",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #5"
+    },
+    {
+      "id": "ELIG-014",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #6"
+    },
+    {
+      "id": "ELIG-015",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #7"
+    },
+    {
+      "id": "ELIG-016",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #8"
+    },
+    {
+      "id": "ELIG-017",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #9"
+    },
+    {
+      "id": "ELIG-018",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #10"
+    },
+    {
+      "id": "ELIG-019",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #11"
+    },
+    {
+      "id": "ELIG-020",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #12"
+    },
+    {
+      "id": "ELIG-021",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #13"
+    },
+    {
+      "id": "ELIG-022",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #14"
+    },
+    {
+      "id": "ELIG-023",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #15"
+    },
+    {
+      "id": "ELIG-024",
+      "module": "Scheme Eligibility Engine",
+      "title": "Scheme Eligibility Engine - supplementary capability #16"
+    },
+    {
+      "id": "REC-001",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "Weighted match scoring"
+    },
+    {
+      "id": "REC-002",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "Category match scoring"
+    },
+    {
+      "id": "REC-003",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "Income fit scoring"
+    },
+    {
+      "id": "REC-004",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "Age fit scoring"
+    },
+    {
+      "id": "REC-005",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "Purpose match scoring"
+    },
+    {
+      "id": "REC-006",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "Financial suitability bonus (subsidy + interest rate)"
+    },
+    {
+      "id": "REC-007",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "Ranked recommendation list"
+    },
+    {
+      "id": "REC-008",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "Tie-breaking by subsidy then interest rate"
+    },
+    {
+      "id": "REC-009",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #1"
+    },
+    {
+      "id": "REC-010",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #2"
+    },
+    {
+      "id": "REC-011",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #3"
+    },
+    {
+      "id": "REC-012",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #4"
+    },
+    {
+      "id": "REC-013",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #5"
+    },
+    {
+      "id": "REC-014",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #6"
+    },
+    {
+      "id": "REC-015",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #7"
+    },
+    {
+      "id": "REC-016",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #8"
+    },
+    {
+      "id": "REC-017",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #9"
+    },
+    {
+      "id": "REC-018",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #10"
+    },
+    {
+      "id": "REC-019",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #11"
+    },
+    {
+      "id": "REC-020",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #12"
+    },
+    {
+      "id": "REC-021",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #13"
+    },
+    {
+      "id": "REC-022",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #14"
+    },
+    {
+      "id": "REC-023",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #15"
+    },
+    {
+      "id": "REC-024",
+      "module": "AI-Powered Scheme Recommendations",
+      "title": "AI-Powered Scheme Recommendations - supplementary capability #16"
+    },
+    {
+      "id": "FIN-001",
+      "module": "Financial Calculators",
+      "title": "EMI calculator"
+    },
+    {
+      "id": "FIN-002",
+      "module": "Financial Calculators",
+      "title": "Loan subsidy calculator"
+    },
+    {
+      "id": "FIN-003",
+      "module": "Financial Calculators",
+      "title": "Total interest calculator"
+    },
+    {
+      "id": "FIN-004",
+      "module": "Financial Calculators",
+      "title": "Total repayment calculator"
+    },
+    {
+      "id": "FIN-005",
+      "module": "Financial Calculators",
+      "title": "Requested vs approved loan amount comparison"
+    },
+    {
+      "id": "FIN-006",
+      "module": "Financial Calculators",
+      "title": "Tenure-based repayment schedule"
+    },
+    {
+      "id": "FIN-007",
+      "module": "Financial Calculators",
+      "title": "Financial summary per recommendation"
+    },
+    {
+      "id": "FIN-008",
+      "module": "Financial Calculators",
+      "title": "Financed amount after subsidy deduction"
+    },
+    {
+      "id": "FIN-009",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #1"
+    },
+    {
+      "id": "FIN-010",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #2"
+    },
+    {
+      "id": "FIN-011",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #3"
+    },
+    {
+      "id": "FIN-012",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #4"
+    },
+    {
+      "id": "FIN-013",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #5"
+    },
+    {
+      "id": "FIN-014",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #6"
+    },
+    {
+      "id": "FIN-015",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #7"
+    },
+    {
+      "id": "FIN-016",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #8"
+    },
+    {
+      "id": "FIN-017",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #9"
+    },
+    {
+      "id": "FIN-018",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #10"
+    },
+    {
+      "id": "FIN-019",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #11"
+    },
+    {
+      "id": "FIN-020",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #12"
+    },
+    {
+      "id": "FIN-021",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #13"
+    },
+    {
+      "id": "FIN-022",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #14"
+    },
+    {
+      "id": "FIN-023",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #15"
+    },
+    {
+      "id": "FIN-024",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #16"
+    },
+    {
+      "id": "FIN-025",
+      "module": "Financial Calculators",
+      "title": "Financial Calculators - supplementary capability #17"
+    },
+    {
+      "id": "APPL-001",
+      "module": "Application Workflow Management",
+      "title": "Submit scheme application"
+    },
+    {
+      "id": "APPL-002",
+      "module": "Application Workflow Management",
+      "title": "View application details"
+    },
+    {
+      "id": "APPL-003",
+      "module": "Application Workflow Management",
+      "title": "Update application status"
+    },
+    {
+      "id": "APPL-004",
+      "module": "Application Workflow Management",
+      "title": "Application status history"
+    },
+    {
+      "id": "APPL-005",
+      "module": "Application Workflow Management",
+      "title": "List applications for a beneficiary"
+    },
+    {
+      "id": "APPL-006",
+      "module": "Application Workflow Management",
+      "title": "Application notes"
+    },
+    {
+      "id": "APPL-007",
+      "module": "Application Workflow Management",
+      "title": "Status transition validation"
+    },
+    {
+      "id": "APPL-008",
+      "module": "Application Workflow Management",
+      "title": "Application-to-scheme linkage"
+    },
+    {
+      "id": "APPL-009",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #1"
+    },
+    {
+      "id": "APPL-010",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #2"
+    },
+    {
+      "id": "APPL-011",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #3"
+    },
+    {
+      "id": "APPL-012",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #4"
+    },
+    {
+      "id": "APPL-013",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #5"
+    },
+    {
+      "id": "APPL-014",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #6"
+    },
+    {
+      "id": "APPL-015",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #7"
+    },
+    {
+      "id": "APPL-016",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #8"
+    },
+    {
+      "id": "APPL-017",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #9"
+    },
+    {
+      "id": "APPL-018",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #10"
+    },
+    {
+      "id": "APPL-019",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #11"
+    },
+    {
+      "id": "APPL-020",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #12"
+    },
+    {
+      "id": "APPL-021",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #13"
+    },
+    {
+      "id": "APPL-022",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #14"
+    },
+    {
+      "id": "APPL-023",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #15"
+    },
+    {
+      "id": "APPL-024",
+      "module": "Application Workflow Management",
+      "title": "Application Workflow Management - supplementary capability #16"
+    },
+    {
+      "id": "DOC-001",
+      "module": "Document Management",
+      "title": "Required document checklist per scheme"
+    },
+    {
+      "id": "DOC-002",
+      "module": "Document Management",
+      "title": "Document upload placeholder"
+    },
+    {
+      "id": "DOC-003",
+      "module": "Document Management",
+      "title": "Document verification status"
+    },
+    {
+      "id": "DOC-004",
+      "module": "Document Management",
+      "title": "Document re-upload on rejection"
+    },
+    {
+      "id": "DOC-005",
+      "module": "Document Management",
+      "title": "Document type validation"
+    },
+    {
+      "id": "DOC-006",
+      "module": "Document Management",
+      "title": "Document list per application"
+    },
+    {
+      "id": "DOC-007",
+      "module": "Document Management",
+      "title": "Secure document storage reference"
+    },
+    {
+      "id": "DOC-008",
+      "module": "Document Management",
+      "title": "Document download link"
+    },
+    {
+      "id": "DOC-009",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #1"
+    },
+    {
+      "id": "DOC-010",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #2"
+    },
+    {
+      "id": "DOC-011",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #3"
+    },
+    {
+      "id": "DOC-012",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #4"
+    },
+    {
+      "id": "DOC-013",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #5"
+    },
+    {
+      "id": "DOC-014",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #6"
+    },
+    {
+      "id": "DOC-015",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #7"
+    },
+    {
+      "id": "DOC-016",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #8"
+    },
+    {
+      "id": "DOC-017",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #9"
+    },
+    {
+      "id": "DOC-018",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #10"
+    },
+    {
+      "id": "DOC-019",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #11"
+    },
+    {
+      "id": "DOC-020",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #12"
+    },
+    {
+      "id": "DOC-021",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #13"
+    },
+    {
+      "id": "DOC-022",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #14"
+    },
+    {
+      "id": "DOC-023",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #15"
+    },
+    {
+      "id": "DOC-024",
+      "module": "Document Management",
+      "title": "Document Management - supplementary capability #16"
+    },
+    {
+      "id": "LANG-001",
+      "module": "Multi-language Support",
+      "title": "English language pack"
+    },
+    {
+      "id": "LANG-002",
+      "module": "Multi-language Support",
+      "title": "Hindi language pack"
+    },
+    {
+      "id": "LANG-003",
+      "module": "Multi-language Support",
+      "title": "Telugu language pack"
+    },
+    {
+      "id": "LANG-004",
+      "module": "Multi-language Support",
+      "title": "Language switcher UI"
+    },
+    {
+      "id": "LANG-005",
+      "module": "Multi-language Support",
+      "title": "Language preference persistence"
+    },
+    {
+      "id": "LANG-006",
+      "module": "Multi-language Support",
+      "title": "Localized scheme names"
+    },
+    {
+      "id": "LANG-007",
+      "module": "Multi-language Support",
+      "title": "Localized error messages"
+    },
+    {
+      "id": "LANG-008",
+      "module": "Multi-language Support",
+      "title": "Right-to-left layout readiness"
+    },
+    {
+      "id": "LANG-009",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #1"
+    },
+    {
+      "id": "LANG-010",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #2"
+    },
+    {
+      "id": "LANG-011",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #3"
+    },
+    {
+      "id": "LANG-012",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #4"
+    },
+    {
+      "id": "LANG-013",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #5"
+    },
+    {
+      "id": "LANG-014",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #6"
+    },
+    {
+      "id": "LANG-015",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #7"
+    },
+    {
+      "id": "LANG-016",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #8"
+    },
+    {
+      "id": "LANG-017",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #9"
+    },
+    {
+      "id": "LANG-018",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #10"
+    },
+    {
+      "id": "LANG-019",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #11"
+    },
+    {
+      "id": "LANG-020",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #12"
+    },
+    {
+      "id": "LANG-021",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #13"
+    },
+    {
+      "id": "LANG-022",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #14"
+    },
+    {
+      "id": "LANG-023",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #15"
+    },
+    {
+      "id": "LANG-024",
+      "module": "Multi-language Support",
+      "title": "Multi-language Support - supplementary capability #16"
+    },
+    {
+      "id": "ADMIN-001",
+      "module": "Admin & Officer Dashboard",
+      "title": "Officer view of pending applications"
+    },
+    {
+      "id": "ADMIN-002",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin view of all beneficiaries"
+    },
+    {
+      "id": "ADMIN-003",
+      "module": "Admin & Officer Dashboard",
+      "title": "Application approval action"
+    },
+    {
+      "id": "ADMIN-004",
+      "module": "Admin & Officer Dashboard",
+      "title": "Application rejection action"
+    },
+    {
+      "id": "ADMIN-005",
+      "module": "Admin & Officer Dashboard",
+      "title": "Bulk status update"
+    },
+    {
+      "id": "ADMIN-006",
+      "module": "Admin & Officer Dashboard",
+      "title": "Officer notes on applications"
+    },
+    {
+      "id": "ADMIN-007",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin scheme management"
+    },
+    {
+      "id": "ADMIN-008",
+      "module": "Admin & Officer Dashboard",
+      "title": "Role-restricted admin actions"
+    },
+    {
+      "id": "ADMIN-009",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #1"
+    },
+    {
+      "id": "ADMIN-010",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #2"
+    },
+    {
+      "id": "ADMIN-011",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #3"
+    },
+    {
+      "id": "ADMIN-012",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #4"
+    },
+    {
+      "id": "ADMIN-013",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #5"
+    },
+    {
+      "id": "ADMIN-014",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #6"
+    },
+    {
+      "id": "ADMIN-015",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #7"
+    },
+    {
+      "id": "ADMIN-016",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #8"
+    },
+    {
+      "id": "ADMIN-017",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #9"
+    },
+    {
+      "id": "ADMIN-018",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #10"
+    },
+    {
+      "id": "ADMIN-019",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #11"
+    },
+    {
+      "id": "ADMIN-020",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #12"
+    },
+    {
+      "id": "ADMIN-021",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #13"
+    },
+    {
+      "id": "ADMIN-022",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #14"
+    },
+    {
+      "id": "ADMIN-023",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #15"
+    },
+    {
+      "id": "ADMIN-024",
+      "module": "Admin & Officer Dashboard",
+      "title": "Admin & Officer Dashboard - supplementary capability #16"
+    },
+    {
+      "id": "NOTIF-001",
+      "module": "Tracking & Notifications",
+      "title": "Application status change tracking"
+    },
+    {
+      "id": "NOTIF-002",
+      "module": "Tracking & Notifications",
+      "title": "Beneficiary application history"
+    },
+    {
+      "id": "NOTIF-003",
+      "module": "Tracking & Notifications",
+      "title": "Status timeline view"
+    },
+    {
+      "id": "NOTIF-004",
+      "module": "Tracking & Notifications",
+      "title": "In-app notification placeholder"
+    },
+    {
+      "id": "NOTIF-005",
+      "module": "Tracking & Notifications",
+      "title": "Email notification placeholder"
+    },
+    {
+      "id": "NOTIF-006",
+      "module": "Tracking & Notifications",
+      "title": "SMS notification placeholder"
+    },
+    {
+      "id": "NOTIF-007",
+      "module": "Tracking & Notifications",
+      "title": "Notification preferences"
+    },
+    {
+      "id": "NOTIF-008",
+      "module": "Tracking & Notifications",
+      "title": "Reminder for incomplete applications"
+    },
+    {
+      "id": "NOTIF-009",
+      "module": "Tracking & Notifications",
+      "title": "Escalation flag for stalled applications"
+    },
+    {
+      "id": "NOTIF-010",
+      "module": "Tracking & Notifications",
+      "title": "Notification read/unread tracking"
+    },
+    {
+      "id": "NOTIF-011",
+      "module": "Tracking & Notifications",
+      "title": "Daily digest of pending actions"
+    },
+    {
+      "id": "NOTIF-012",
+      "module": "Tracking & Notifications",
+      "title": "Notification log for audit"
+    },
+    {
+      "id": "NOTIF-013",
+      "module": "Tracking & Notifications",
+      "title": "Webhook notification placeholder"
+    },
+    {
+      "id": "NOTIF-014",
+      "module": "Tracking & Notifications",
+      "title": "In-app alert badge count"
+    },
+    {
+      "id": "NOTIF-015",
+      "module": "Tracking & Notifications",
+      "title": "Tracking & Notifications - supplementary capability #1"
+    },
+    {
+      "id": "NOTIF-016",
+      "module": "Tracking & Notifications",
+      "title": "Tracking & Notifications - supplementary capability #2"
+    },
+    {
+      "id": "NOTIF-017",
+      "module": "Tracking & Notifications",
+      "title": "Tracking & Notifications - supplementary capability #3"
+    },
+    {
+      "id": "NOTIF-018",
+      "module": "Tracking & Notifications",
+      "title": "Tracking & Notifications - supplementary capability #4"
+    },
+    {
+      "id": "NOTIF-019",
+      "module": "Tracking & Notifications",
+      "title": "Tracking & Notifications - supplementary capability #5"
+    },
+    {
+      "id": "NOTIF-020",
+      "module": "Tracking & Notifications",
+      "title": "Tracking & Notifications - supplementary capability #6"
+    },
+    {
+      "id": "NOTIF-021",
+      "module": "Tracking & Notifications",
+      "title": "Tracking & Notifications - supplementary capability #7"
+    },
+    {
+      "id": "NOTIF-022",
+      "module": "Tracking & Notifications",
+      "title": "Tracking & Notifications - supplementary capability #8"
+    },
+    {
+      "id": "NOTIF-023",
+      "module": "Tracking & Notifications",
+      "title": "Tracking & Notifications - supplementary capability #9"
+    },
+    {
+      "id": "NOTIF-024",
+      "module": "Tracking & Notifications",
+      "title": "Tracking & Notifications - supplementary capability #10"
+    },
+    {
+      "id": "NOTIF-025",
+      "module": "Tracking & Notifications",
+      "title": "Tracking & Notifications - supplementary capability #11"
+    },
+    {
+      "id": "REPORT-001",
+      "module": "Reporting & Analytics",
+      "title": "Total beneficiaries report"
+    },
+    {
+      "id": "REPORT-002",
+      "module": "Reporting & Analytics",
+      "title": "Total applications report"
+    },
+    {
+      "id": "REPORT-003",
+      "module": "Reporting & Analytics",
+      "title": "Applications by status breakdown"
+    },
+    {
+      "id": "REPORT-004",
+      "module": "Reporting & Analytics",
+      "title": "Applications by scheme breakdown"
+    },
+    {
+      "id": "REPORT-005",
+      "module": "Reporting & Analytics",
+      "title": "Applications by category breakdown"
+    },
+    {
+      "id": "REPORT-006",
+      "module": "Reporting & Analytics",
+      "title": "State-wise distribution report"
+    },
+    {
+      "id": "REPORT-007",
+      "module": "Reporting & Analytics",
+      "title": "Monthly application trend"
+    },
+    {
+      "id": "REPORT-008",
+      "module": "Reporting & Analytics",
+      "title": "Scheme popularity ranking"
+    },
+    {
+      "id": "REPORT-009",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #1"
+    },
+    {
+      "id": "REPORT-010",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #2"
+    },
+    {
+      "id": "REPORT-011",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #3"
+    },
+    {
+      "id": "REPORT-012",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #4"
+    },
+    {
+      "id": "REPORT-013",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #5"
+    },
+    {
+      "id": "REPORT-014",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #6"
+    },
+    {
+      "id": "REPORT-015",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #7"
+    },
+    {
+      "id": "REPORT-016",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #8"
+    },
+    {
+      "id": "REPORT-017",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #9"
+    },
+    {
+      "id": "REPORT-018",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #10"
+    },
+    {
+      "id": "REPORT-019",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #11"
+    },
+    {
+      "id": "REPORT-020",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #12"
+    },
+    {
+      "id": "REPORT-021",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #13"
+    },
+    {
+      "id": "REPORT-022",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #14"
+    },
+    {
+      "id": "REPORT-023",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #15"
+    },
+    {
+      "id": "REPORT-024",
+      "module": "Reporting & Analytics",
+      "title": "Reporting & Analytics - supplementary capability #16"
+    },
+    {
+      "id": "SEARCH-001",
+      "module": "Search & Discovery",
+      "title": "Scheme search by keyword"
+    },
+    {
+      "id": "SEARCH-002",
+      "module": "Search & Discovery",
+      "title": "Scheme filter by category"
+    },
+    {
+      "id": "SEARCH-003",
+      "module": "Search & Discovery",
+      "title": "Scheme filter by state"
+    },
+    {
+      "id": "SEARCH-004",
+      "module": "Search & Discovery",
+      "title": "Scheme filter by purpose"
+    },
+    {
+      "id": "SEARCH-005",
+      "module": "Search & Discovery",
+      "title": "Scheme filter by loan amount range"
+    },
+    {
+      "id": "SEARCH-006",
+      "module": "Search & Discovery",
+      "title": "Sort schemes by subsidy percent"
+    },
+    {
+      "id": "SEARCH-007",
+      "module": "Search & Discovery",
+      "title": "Sort schemes by interest rate"
+    },
+    {
+      "id": "SEARCH-008",
+      "module": "Search & Discovery",
+      "title": "Full feature registry lookup by ID"
+    },
+    {
+      "id": "SEARCH-009",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #1"
+    },
+    {
+      "id": "SEARCH-010",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #2"
+    },
+    {
+      "id": "SEARCH-011",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #3"
+    },
+    {
+      "id": "SEARCH-012",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #4"
+    },
+    {
+      "id": "SEARCH-013",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #5"
+    },
+    {
+      "id": "SEARCH-014",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #6"
+    },
+    {
+      "id": "SEARCH-015",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #7"
+    },
+    {
+      "id": "SEARCH-016",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #8"
+    },
+    {
+      "id": "SEARCH-017",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #9"
+    },
+    {
+      "id": "SEARCH-018",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #10"
+    },
+    {
+      "id": "SEARCH-019",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #11"
+    },
+    {
+      "id": "SEARCH-020",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #12"
+    },
+    {
+      "id": "SEARCH-021",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #13"
+    },
+    {
+      "id": "SEARCH-022",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #14"
+    },
+    {
+      "id": "SEARCH-023",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #15"
+    },
+    {
+      "id": "SEARCH-024",
+      "module": "Search & Discovery",
+      "title": "Search & Discovery - supplementary capability #16"
+    },
+    {
+      "id": "UX-001",
+      "module": "Accessibility & UX",
+      "title": "Responsive layout for mobile devices"
+    },
+    {
+      "id": "UX-002",
+      "module": "Accessibility & UX",
+      "title": "High-contrast accessible theme"
+    },
+    {
+      "id": "UX-003",
+      "module": "Accessibility & UX",
+      "title": "Keyboard navigation support"
+    },
+    {
+      "id": "UX-004",
+      "module": "Accessibility & UX",
+      "title": "Screen-reader friendly labels"
+    },
+    {
+      "id": "UX-005",
+      "module": "Accessibility & UX",
+      "title": "Form validation with inline error messages"
+    },
+    {
+      "id": "UX-006",
+      "module": "Accessibility & UX",
+      "title": "Loading and empty states"
+    },
+    {
+      "id": "UX-007",
+      "module": "Accessibility & UX",
+      "title": "Consistent status badges/seals"
+    },
+    {
+      "id": "UX-008",
+      "module": "Accessibility & UX",
+      "title": "Guided onboarding flow"
+    },
+    {
+      "id": "UX-009",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #1"
+    },
+    {
+      "id": "UX-010",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #2"
+    },
+    {
+      "id": "UX-011",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #3"
+    },
+    {
+      "id": "UX-012",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #4"
+    },
+    {
+      "id": "UX-013",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #5"
+    },
+    {
+      "id": "UX-014",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #6"
+    },
+    {
+      "id": "UX-015",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #7"
+    },
+    {
+      "id": "UX-016",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #8"
+    },
+    {
+      "id": "UX-017",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #9"
+    },
+    {
+      "id": "UX-018",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #10"
+    },
+    {
+      "id": "UX-019",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #11"
+    },
+    {
+      "id": "UX-020",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #12"
+    },
+    {
+      "id": "UX-021",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #13"
+    },
+    {
+      "id": "UX-022",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #14"
+    },
+    {
+      "id": "UX-023",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #15"
+    },
+    {
+      "id": "UX-024",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #16"
+    },
+    {
+      "id": "UX-025",
+      "module": "Accessibility & UX",
+      "title": "Accessibility & UX - supplementary capability #17"
+    }
+  ]
+}

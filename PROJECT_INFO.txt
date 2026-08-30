@@ -1,0 +1,9 @@
+PROJECT: Scheme Sahayak AI
+PURPOSE: AI-assisted government scheme discovery and beneficiary support
+SCHEME REGISTRY: 4,693 schemes from data/Schemes.csv
+FEATURE REGISTRY: 317 registered/planned capabilities
+CORE FLOW: Profile -> Eligibility -> AI Recommendations -> Individual Scheme -> Financial Planning -> Apply -> Track
+EMBEDDED AI: Scheme Sahayak AI assistant with optional local Ollama and offline fallback
+
+
+UPDATED BUILD: Persistent SQLite database + grounded conversational AI + chat history + saved schemes + partner registry tables.
